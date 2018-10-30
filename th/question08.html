@@ -1,0 +1,38 @@
+<?php
+session_start(); //start session.
+$_SESSION["correct"] = 7;
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome</title>
+<meta charset="utf-8">
+<style type="text/css">
+body,td,th {
+	color: #FFFCFC;
+}
+body {
+	background-color: #000000;
+}
+</style>
+</head>
+<body>
+	<?php
+            if($_COOKIE['count'] != 8)
+                {   //echo "cheat";
+                    header('Location: cheat.php'); //redirect URL 
+                 }
+         
+        ?>
+	<script  type="text/javascript" src="scripts/scripts.js"></script>
+<center>
+  <p><img src="images/cyberpunk.png" width="468" height="265" alt=""/></p>
+  <p><img src="images/whatever.jpg" style="width:300px;height:300px;"><BR> 
+    <input type="text" id="ans" name="ans"/>
+    <input type="button" id="button" value="gotcha" onclick="question8()"/>
+  </p>
+</center>
+
+</body>
+</html>
